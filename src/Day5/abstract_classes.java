@@ -18,7 +18,7 @@ class Child2 extends Parent2 {
         System.out.println("GM");
     }
 
-    @Override
+    @Override 
     public void greet1() {
         System.out.println("GN");
     }
