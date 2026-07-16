@@ -1,43 +1,44 @@
 package Day5;
-
-public class interfaces package com.company;
-interface Bicycle{
-    int a=45;
-    void applyBreak(int decrement);
-    void speedUp(int increment);
+interface bicycle {
+   void applyBreak(int dec);
+   int a=45;
+    void speedUp(int inc);
 }
 interface  horn{
     void applyHorn();
-    void applyHorn1();
+    void applyHorn2();
 }
-class AvonCycle implements Bicycle,horn{
-    public void blowHorn(){
-        System.out.println(" pee pee poo poo");
+class avoncycle implements bicycle,horn {
+    @Override
+    public void speedUp(int inc) {
+        System.out.println("speeding up");
     }
 
     @Override
-    public void applyBreak(int decrement) {
+    public void applyBreak(int dec) {
         System.out.println("applying break");
     }
 
     @Override
-    public void speedUp(int increment) {
-        System.out.println(" applying speedUp");
+    public void applyHorn() {
+        System.out.println(" pe pe pe ");
     }
-    public void applyHorn(){
-        System.out.println("yara na ");
+
+    @Override
+    public void applyHorn2() {
+        System.out.println("po po po");
     }
-    public void applyHorn1(){
-        System.out.println("desh mera pee pee ");
+
+    public static class interfaces {
+        public static void main(String[] args) {
+            avoncycle c = new avoncycle();
+           c.speedUp(8);
+           c.applyBreak(8);
+           c.applyHorn();
+           c.applyHorn2();
+            System.out.println(bicycle.a);
+        }
+
+
     }
-}
-public class cwh_54_interfaces {
-    public static void main(String[] args) {
-        AvonCycle c=new AvonCycle();
-        c.applyHorn();
-        c.speedUp(23);
-        System.out.println(Bicycle.a);
-    }
-}
-{
 }
