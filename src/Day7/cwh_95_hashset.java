@@ -12,8 +12,5 @@ public class cwh_95_hashset {
         System.out.println(h);
         h.clear();
         System.out.println(h);
-
-
-
     }
 }
